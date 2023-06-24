@@ -1,0 +1,50 @@
+<div class="banner">
+  <div class="content">
+    <h1 class="mb-5">Comida refrescante <br/>a sua porta</h1>
+    <a routerLink="menu">CONFIRA <i class="bi bi-arrow-right-circle"></i> </a>
+  </div>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <h1 class="text-center">Como pedir nossa <span class="highlight">Comida Artesanal</span></h1>
+    <div class="row mt-5">
+      
+        <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+            <h1>1</h1>
+            <p>Escolha sua comida</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+            <h1>2</h1>
+            <p>Veja os detalhes</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+            <h1>3</h1>
+            <p>Receba seu pedido em pouco tempo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4 mb-4" >
+        <h2 class="text-center">Customize sua  <span class="highlight">comida favorita</span></h2>
+        <div class="row">
+          <div class="col-lg-3 mt-3" *ngFor="let fd of foodData; index as i">
+            <div class="foodBox" *ngIf="i <= 3">
+              <img src="{{fd.foodImg}}" alt="imagem de comida">
+              <h2>{{fd.foodName}}</h2>
+              <p>{{fd.foodPrice | currency: 'BRL'}}</p>
+            </div>
+            
+          </div>
+        </div>
+        <a routerLink="menu" class="viewMoreBtn" >
+          Veja mais <i class="bi bi-arrow-right-circle"></i></a>
+      </div>
+  
+

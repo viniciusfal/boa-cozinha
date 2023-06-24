@@ -1,0 +1,9 @@
+.nav-link
+{
+    color: var(--blue-500);
+}
+.navbar-nav .nav-link.active
+{
+    color: var(--green-500);
+    text-decoration: underline;
+}
